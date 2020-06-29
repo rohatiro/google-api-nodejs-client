@@ -57,10 +57,6 @@ export namespace dataproc_v1beta2 {
      */
     '$.xgafv'?: string;
     /**
-     * OAuth access token.
-     */
-    access_token?: string;
-    /**
      * Data format for response.
      */
     alt?: string;
@@ -76,10 +72,6 @@ export namespace dataproc_v1beta2 {
      * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
      */
     key?: string;
-    /**
-     * OAuth 2.0 token for the current user.
-     */
-    oauth_token?: string;
     /**
      * Returns response with indentations and line breaks.
      */
@@ -319,6 +311,10 @@ export namespace dataproc_v1beta2 {
      * Optional. The config settings for software inside the cluster.
      */
     softwareConfig?: Schema$SoftwareConfig;
+    /**
+     * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster&#39;s temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket.
+     */
+    tempBucket?: string | null;
     /**
      * Optional. The Compute Engine config settings for worker instances in a cluster.
      */
