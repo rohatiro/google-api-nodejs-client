@@ -200,6 +200,10 @@ export namespace sasportal_v1alpha1 {
      */
     activeConfig?: Schema$SasPortalDeviceConfig;
     /**
+     * Device parameters that can be overridden by both SAS Portal and SAS registration requests.
+     */
+    deviceMetadata?: Schema$SasPortalDeviceMetadata;
+    /**
      * Device display name.
      */
     displayName?: string | null;
@@ -319,6 +323,10 @@ export namespace sasportal_v1alpha1 {
      */
     suspensionReason?: string[] | null;
   }
+  /**
+   * Device data overridable by both SAS Portal and registration requests.
+   */
+  export interface Schema$SasPortalDeviceMetadata {}
   /**
    * Information about the model of the device.
    */
@@ -1318,6 +1326,7 @@ export namespace sasportal_v1alpha1 {
      *       // request body parameters
      *       // {
      *       //   "activeConfig": {},
+     *       //   "deviceMetadata": {},
      *       //   "displayName": "my_displayName",
      *       //   "fccId": "my_fccId",
      *       //   "grants": [],
@@ -1333,6 +1342,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -1481,6 +1491,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -1746,6 +1757,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -2185,6 +2197,7 @@ export namespace sasportal_v1alpha1 {
      *       // request body parameters
      *       // {
      *       //   "activeConfig": {},
+     *       //   "deviceMetadata": {},
      *       //   "displayName": "my_displayName",
      *       //   "fccId": "my_fccId",
      *       //   "grants": [],
@@ -2200,6 +2213,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -2484,6 +2498,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -4600,6 +4615,7 @@ export namespace sasportal_v1alpha1 {
      *       // request body parameters
      *       // {
      *       //   "activeConfig": {},
+     *       //   "deviceMetadata": {},
      *       //   "displayName": "my_displayName",
      *       //   "fccId": "my_fccId",
      *       //   "grants": [],
@@ -4615,6 +4631,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -4763,6 +4780,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -5028,6 +5046,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -5467,6 +5486,7 @@ export namespace sasportal_v1alpha1 {
      *       // request body parameters
      *       // {
      *       //   "activeConfig": {},
+     *       //   "deviceMetadata": {},
      *       //   "displayName": "my_displayName",
      *       //   "fccId": "my_fccId",
      *       //   "grants": [],
@@ -5482,6 +5502,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -5766,6 +5787,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -7096,6 +7118,7 @@ export namespace sasportal_v1alpha1 {
      *       // request body parameters
      *       // {
      *       //   "activeConfig": {},
+     *       //   "deviceMetadata": {},
      *       //   "displayName": "my_displayName",
      *       //   "fccId": "my_fccId",
      *       //   "grants": [],
@@ -7111,6 +7134,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
@@ -7259,6 +7283,7 @@ export namespace sasportal_v1alpha1 {
      *   // Example response
      *   // {
      *   //   "activeConfig": {},
+     *   //   "deviceMetadata": {},
      *   //   "displayName": "my_displayName",
      *   //   "fccId": "my_fccId",
      *   //   "grants": [],
