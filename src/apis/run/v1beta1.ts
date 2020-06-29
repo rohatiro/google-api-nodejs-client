@@ -57,6 +57,10 @@ export namespace run_v1beta1 {
      */
     '$.xgafv'?: string;
     /**
+     * OAuth access token.
+     */
+    access_token?: string;
+    /**
      * Data format for response.
      */
     alt?: string;
@@ -72,6 +76,10 @@ export namespace run_v1beta1 {
      * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
      */
     key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
     /**
      * Returns response with indentations and line breaks.
      */
@@ -91,7 +99,7 @@ export namespace run_v1beta1 {
   }
 
   /**
-   * Cloud Run API
+   * Cloud Run Admin API
    *
    * Deploy and manage user provided container images that scale automatically based on HTTP traffic.
    *

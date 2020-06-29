@@ -57,6 +57,10 @@ export namespace run_v1 {
      */
     '$.xgafv'?: string;
     /**
+     * OAuth access token.
+     */
+    access_token?: string;
+    /**
      * Data format for response.
      */
     alt?: string;
@@ -72,6 +76,10 @@ export namespace run_v1 {
      * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
      */
     key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
     /**
      * Returns response with indentations and line breaks.
      */
@@ -91,7 +99,7 @@ export namespace run_v1 {
   }
 
   /**
-   * Cloud Run API
+   * Cloud Run Admin API
    *
    * Deploy and manage user provided container images that scale automatically based on HTTP traffic.
    *
@@ -1067,7 +1075,7 @@ export namespace run_v1 {
      */
     serviceAccountName?: string | null;
     /**
-     * TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Not currently used by Cloud Run.
+     * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.  Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 900 seconds (15 minutes).  Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is configurable by the cluster operator.
      */
     timeoutSeconds?: number | null;
     volumes?: Schema$Volume[];
