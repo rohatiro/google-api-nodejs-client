@@ -149,6 +149,10 @@ export namespace container_v1 {
      */
     cloudRunConfig?: Schema$CloudRunConfig;
     /**
+     * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+     */
+    dnsCacheConfig?: Schema$DnsCacheConfig;
+    /**
      * Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
      */
     horizontalPodAutoscaling?: Schema$HorizontalPodAutoscaling;
@@ -323,7 +327,7 @@ export namespace container_v1 {
      */
     currentNodeCount?: number | null;
     /**
-     * [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
+     * [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
      */
     currentNodeVersion?: string | null;
     /**
@@ -620,7 +624,7 @@ export namespace container_v1 {
    */
   export interface Schema$CreateClusterRequest {
     /**
-     * Required. A [cluster resource](https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters)
+     * Required. A [cluster resource](https://cloud.google.com/container-engine/reference/rest/v1/projects.locations.clusters)
      */
     cluster?: Schema$Cluster;
     /**
@@ -686,6 +690,15 @@ export namespace container_v1 {
      * Denotes the state of etcd encryption.
      */
     state?: string | null;
+  }
+  /**
+   * Configuration for NodeLocal DNSCache
+   */
+  export interface Schema$DnsCacheConfig {
+    /**
+     * Whether NodeLocal DNSCache is enabled for this cluster.
+     */
+    enabled?: boolean | null;
   }
   /**
    * A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance:      service Foo {       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);     }  The JSON representation for `Empty` is empty JSON object `{}`.
@@ -1509,11 +1522,11 @@ export namespace container_v1 {
      */
     validImageTypes?: string[] | null;
     /**
-     * List of valid master versions.
+     * List of valid master versions, in descending order.
      */
     validMasterVersions?: string[] | null;
     /**
-     * List of valid node upgrade target versions.
+     * List of valid node upgrade target versions, in descending order.
      */
     validNodeVersions?: string[] | null;
   }
